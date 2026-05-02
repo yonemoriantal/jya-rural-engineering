@@ -2,307 +2,292 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>JYA Rural Engineering | Engineering Support for Rural Communities</title>
+<title>JYA Inc. — Rural Engineering & Infrastructure Support</title>
 
-  <meta name="description" content="Engineering support for rural counties, agencies, farms, and building owners. Federal-grade engineering discipline tailored to rural infrastructure, facilities, agriculture, and energy projects.">
-  <meta name="author" content="JYA Inc.">
+<meta name="description" content="JYA Inc. provides rural engineering services to counties, agencies, farms, and building owners, applying federal-grade engineering discipline to infrastructure, facilities, agriculture, and energy upgrades." />
+<meta name="author" content="JYA Inc." />
 
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+<!-- ===== STYLES (UNCHANGED FROM JYA INC) ===== -->
+<style>
+/* EXACT STYLE BLOCK FROM JYA TEMPLATE — UNCHANGED */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+--navy:#0b1a2e; --slate:#1e2d40; --steel:#3a4f66;
+--accent:#4a90d9; --accent-dim:#3670b0;
+--white:#ffffff; --divider:#2c3e55;
+--text-main:#d0d8e2; --text-muted:#8a9bb0;
+--font-sans:'Segoe UI',system-ui,-apple-system,Helvetica,Arial,sans-serif;
+--font-mono:'Cascadia Code','Consolas',monospace;
+--max-width:1120px; --section-py:5rem;
+}
 
-    :root {
-      --navy: #0b1a2e;
-      --slate: #1e2d40;
-      --steel: #3a4f66;
-      --accent: #7fbf7f;
-      --divider: #2c3e55;
-      --text-main: #d8e2d8;
-      --text-muted: #9fb3a1;
-      --white: #ffffff;
-      --max-width: 1120px;
-    }
+html { scroll-behavior:smooth; font-size:16px; }
+body {
+font-family:var(--font-sans);
+background:var(--navy);
+color:var(--text-main);
+line-height:1.7;
+-webkit-font-smoothing:antialiased;
+}
 
-    body {
-      font-family: "Segoe UI", Arial, sans-serif;
-      background: var(--navy);
-      color: var(--text-main);
-      line-height: 1.7;
-    }
+a { color:var(--accent); text-decoration:none; }
+a:hover { color:var(--white); }
 
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { color: var(--white); }
+.container { width:90%; max-width:var(--max-width); margin:0 auto; }
 
-    .container {
-      width: 90%;
-      max-width: var(--max-width);
-      margin: 0 auto;
-    }
+/* NAV */
+nav {
+position:fixed; top:0; left:0; right:0; z-index:100;
+background:rgba(11,26,46,.92);
+backdrop-filter:blur(12px);
+border-bottom:1px solid var(--divider);
+}
+nav .container {
+display:flex; align-items:center; justify-content:space-between;
+padding:.85rem 0; gap:1rem; flex-wrap:wrap;
+}
+nav .brand {
+font-size:1.15rem; font-weight:700; color:var(--white);
+letter-spacing:.04em; white-space:nowrap;
+}
+nav .brand span { color:var(--accent); }
+nav ul { list-style:none; display:flex; gap:1.4rem; flex-wrap:wrap; }
+nav ul li a {
+font-size:.82rem; font-weight:500; color:var(--text-muted);
+text-transform:uppercase; letter-spacing:.08em;
+}
+nav ul li a:hover { color:var(--white); }
 
-    /* ===== NAV ===== */
-    nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      background: rgba(11,26,46,.95);
-      border-bottom: 1px solid var(--divider);
-      z-index: 100;
-    }
+/* CROSS SITE NAV */
+.xnav {
+display:flex; gap:.5rem; align-items:center; flex-wrap:wrap;
+}
+.xnav a {
+font-size:.72rem; font-weight:600; color:var(--steel);
+text-transform:uppercase; letter-spacing:.08em;
+padding:.25rem .45rem; border-radius:4px;
+border:1px solid transparent;
+}
+.xnav a:hover {
+color:var(--white);
+border-color:var(--divider);
+background:rgba(74,144,217,.06);
+}
+.xnav a.active {
+color:var(--white);
+border-color:var(--accent);
+background:rgba(74,144,217,.10);
+}
 
-    nav .container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      padding: 0.85rem 0;
-      flex-wrap: wrap;
-    }
+/* HERO */
+.hero {
+min-height:100vh;
+display:flex; align-items:center; justify-content:center;
+text-align:center;
+padding:8rem 0 6rem;
+background:
+radial-gradient(ellipse at 30% 20%, rgba(74,144,217,.08) 0%, transparent 60%),
+radial-gradient(ellipse at 70% 80%, rgba(74,144,217,.05) 0%, transparent 50%),
+var(--navy);
+}
+.hero h1 {
+font-size:clamp(2.2rem,5vw,3.6rem);
+font-weight:700; color:#fff; line-height:1.15;
+margin-bottom:1rem;
+}
+.hero h1 span { color:var(--accent); }
+.hero .subtitle {
+font-size:clamp(1rem,2vw,1.25rem);
+color:var(--text-muted);
+max-width:720px; margin:0 auto 1.5rem;
+}
+.hero .credentials {
+font-size:.8rem; color:var(--steel);
+letter-spacing:.06em; text-transform:uppercase;
+font-family:var(--font-mono);
+margin-bottom:2.5rem;
+}
 
-    .brand {
-      font-weight: 700;
-      color: var(--white);
-      white-space: nowrap;
-    }
+/* COMMON SECTIONS */
+section { padding:var(--section-py) 0; }
+section:nth-child(even) { background:var(--slate); }
+.section-label {
+font-size:.7rem; text-transform:uppercase;
+letter-spacing:.16em; color:var(--accent);
+margin-bottom:.5rem;
+}
+.section-title {
+font-size:clamp(1.5rem,3vw,2rem);
+font-weight:700; color:#fff; margin-bottom:1rem;
+}
+.section-intro {
+max-width:720px; color:var(--text-muted);
+margin-bottom:2.5rem;
+}
+.divider {
+width:48px; height:3px; background:var(--accent);
+border-radius:2px; margin-bottom:2rem;
+}
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1.2rem;
-      flex-wrap: wrap;
-    }
+/* LAYOUT COMPONENTS (UNCHANGED) */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;}
+.about-text p{margin-bottom:1rem;}
+.about-highlights{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;}
+.highlight-card{background:var(--navy);border:1px solid var(--divider);border-radius:6px;padding:1.4rem;}
+.highlight-card .number{font-size:1.8rem;font-weight:700;color:var(--accent);}
+.highlight-card .label{font-size:.78rem;color:var(--text-muted);text-transform:uppercase;}
 
-    nav ul a {
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--text-muted);
-    }
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;}
+.service-card{background:var(--navy);border:1px solid var(--divider);border-radius:6px;padding:2rem;}
+.service-card h3{color:#fff;margin-bottom:.6rem;}
+.service-card p{color:var(--text-muted);font-size:.9rem;}
 
-    nav ul a:hover { color: var(--white); }
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;}
+.contact-info-item{display:flex;gap:.75rem;margin-bottom:1.3rem;}
+.contact-form input,.contact-form textarea{
+width:100%;padding:.75rem 1rem;margin-bottom:1rem;
+background:var(--navy);border:1px solid var(--divider);
+border-radius:4px;color:var(--text-main);
+}
 
-    .xnav {
-      display: flex;
-      gap: 0.6rem;
-      flex-wrap: wrap;
-    }
-
-    .xnav a {
-      font-size: 0.7rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--steel);
-      padding: 0.25rem 0.45rem;
-      border-radius: 4px;
-    }
-
-    .xnav a:hover {
-      color: var(--white);
-      background: rgba(127,191,127,.12);
-    }
-
-    .xnav a.active {
-      color: var(--white);
-      background: rgba(127,191,127,.22);
-      border: 1px solid rgba(127,191,127,.35);
-    }
-
-    /* ===== HERO ===== */
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      text-align: center;
-      padding: 8rem 0 6rem;
-      background:
-        radial-gradient(ellipse at 30% 20%, rgba(127,191,127,.15), transparent 60%),
-        var(--navy);
-    }
-
-    .hero h1 {
-      font-size: clamp(2.4rem, 5vw, 3.4rem);
-      color: var(--white);
-      margin-bottom: 1rem;
-    }
-
-    .hero p {
-      max-width: 780px;
-      margin: 0 auto;
-      color: var(--text-muted);
-    }
-
-    /* ===== SECTION ===== */
-    section { padding: 5rem 0; }
-    section:nth-child(even) { background: var(--slate); }
-
-    .section-label {
-      font-size: 0.7rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--accent);
-    }
-
-    .section-title {
-      font-size: clamp(1.5rem, 3vw, 2rem);
-      color: var(--white);
-      margin: 0.6rem 0 1rem;
-    }
-
-    .divider {
-      width: 48px;
-      height: 3px;
-      background: var(--accent);
-      margin-bottom: 2rem;
-    }
-
-    ul { margin-left: 1.25rem; }
-    li { margin-bottom: 0.4rem; }
-
-    footer {
-      border-top: 1px solid var(--divider);
-      padding: 2.5rem 0;
-      text-align: center;
-      font-size: 0.75rem;
-      color: var(--text-muted);
-    }
-  </style>
+footer{
+border-top:1px solid var(--divider);
+padding:2.5rem 0;text-align:center;
+font-size:.78rem;color:var(--text-muted);
+}
+</style>
 </head>
 
 <body>
 
 <nav>
-  <div class="container">
-    <div class="brand">JYA Rural Engineering</div>
-
-    <ul>
-      <li><a href="#approach">Approach</a></li>
-      <li><a href="#clients">Who We Serve</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-
-    <div class="xnav">
-      <a href="https://jyainc.com">JYA Inc.</a>
-      <a href="https://homes-hear-specialist.com">HOMES / HEAR</a>
-      <a href="https://jya-rural-engineering.com" class="active">Rural Engineering</a>
-    </div>
-  </div>
+<div class="container">
+<a href="#home" class="brand">JYA<span>.</span></a>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#capabilities">Capabilities</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+<div class="xnav">
+<a href="https://jyainc.com">JYA Inc.</a>
+<a href="https://homes-hear-specialist.com">HOMES / HEAR</a>
+<a href="https://jya-rural-engineering.com" class="active">Rural Engineering</a>
+</div>
+</div>
 </nav>
 
-<section class="hero">
-  <div class="container">
-    <h1>Engineering Support for Rural Counties, Agencies, Farms, and Building Owners</h1>
-    <p>
-      JYA Inc. provides rural engineering services to counties, state agencies, federal programs,
-      and private rural building owners — including farms, co‑ops, and small facilities.
-      We bring federal‑grade engineering discipline to the practical realities of rural communities.
-    </p>
-  </div>
+<!-- HERO -->
+<section class="hero" id="home">
+<div class="container">
+<p class="credentials">Rural · Infrastructure · Agriculture · Energy</p>
+<h1>Engineering Support for Rural Counties,<br><span>Agencies, Farms, and Building Owners</span></h1>
+<p class="subtitle">
+JYA Inc. provides rural engineering services to counties, state agencies, federal programs,
+and private rural building owners — including farms, co‑ops, and small facilities.
+</p>
+</div>
 </section>
 
-<section id="approach">
-  <div class="container">
-    <p class="section-label">Procurement Reality</p>
-    <h2 class="section-title">How Rural Communities Procure Engineering Services</h2>
-    <div class="divider"></div>
+<!-- ABOUT -->
+<section id="about">
+<div class="container">
+<p class="section-label">About</p>
+<h2 class="section-title">Who We Are</h2>
+<div class="divider"></div>
 
-    <p>
-      Rural jurisdictions rarely rely on large procurement portals. Opportunities are typically
-      announced through:
-    </p>
+<div class="about-grid">
+<div class="about-text">
+<p>
+JYA Inc. brings federal‑grade engineering discipline to the practical realities of rural communities,
+where infrastructure is aging, budgets are tight, and operations must stay running during upgrades.
+</p>
+<p>
+Our work supports public works teams, rural administrators, facility managers,
+and agricultural operators who need clear, reliable engineering guidance without big‑city complexity.
+</p>
+</div>
 
-    <ul>
-      <li>County and municipal websites</li>
-      <li>Clerk or administrative notices</li>
-      <li>Public works and facilities postings</li>
-      <li>Local newspaper legal notices</li>
-      <li>Occasional state or federal procurement systems</li>
-    </ul>
-
-    <p>
-      JYA Rural Engineering operates comfortably in this environment —
-      straightforward scopes, practical expectations, and responsive support.
-    </p>
-  </div>
+<div class="about-highlights">
+<div class="highlight-card"><div class="number">Rural</div><div class="label">Focused Practice</div></div>
+<div class="highlight-card"><div class="number">Federal</div><div class="label">Discipline Applied</div></div>
+<div class="highlight-card"><div class="number">Ops</div><div class="label">Continuity First</div></div>
+<div class="highlight-card"><div class="number">Fields</div><div class="label">Agriculture & Public Works</div></div>
+</div>
+</div>
+</div>
 </section>
 
-<section id="clients">
-  <div class="container">
-    <p class="section-label">Clients</p>
-    <h2 class="section-title">Who We Serve</h2>
-    <div class="divider"></div>
-
-    <ul>
-      <li>County governments and rural municipalities</li>
-      <li>State agencies and DOTs</li>
-      <li>Federal rural programs</li>
-      <li>Public works and roads departments</li>
-      <li>Rural hospitals and clinics</li>
-      <li>Private rural building owners</li>
-      <li>Farms, co‑ops, and agricultural operations</li>
-      <li>Rural commercial and industrial facilities</li>
-    </ul>
-
-    <p>If it’s rural, aging, or under‑resourced — we can help.</p>
-  </div>
-</section>
-
-<section id="experience">
-  <div class="container">
-    <p class="section-label">Experience</p>
-    <h2 class="section-title">Rural‑Relevant Project Experience</h2>
-    <div class="divider"></div>
-
-    <p>
-      Our rural experience includes agriculture facilities, infrastructure, utilities,
-      community buildings, renewables, and resilience planning — drawing directly from
-      decades of federal and field‑based project delivery.
-    </p>
-  </div>
-</section>
-
+<!-- SERVICES -->
 <section id="services">
-  <div class="container">
-    <p class="section-label">Capabilities</p>
-    <h2 class="section-title">What JYA Rural Engineering Provides</h2>
-    <div class="divider"></div>
+<div class="container">
+<p class="section-label">Services</p>
+<h2 class="section-title">What JYA Rural Engineering Provides</h2>
+<div class="divider"></div>
 
-    <ul>
-      <li>3D scanning, LiDAR, and as‑built verification</li>
-      <li>Rural infrastructure and facilities engineering</li>
-      <li>Energy and cost‑reduction engineering</li>
-      <li>Agricultural and farm facility engineering</li>
-      <li>Continuity, resilience, and hazard mitigation planning</li>
-    </ul>
-  </div>
+<div class="services-grid">
+<div class="service-card"><h3>3D Scanning & As‑Built Verification</h3><p>Full facility LiDAR scanning, scan‑to‑Revit modeling, MEP verification, and digital twins.</p></div>
+<div class="service-card"><h3>Rural Infrastructure & Facilities</h3><p>Condition assessments, HVAC/MEP upgrades, compliance and lifecycle planning.</p></div>
+<div class="service-card"><h3>Energy & Cost Reduction</h3><p>Heat pumps, solar feasibility, utility incentive stacking, HVAC optimization.</p></div>
+<div class="service-card"><h3>Agricultural Facilities</h3><p>Barns, shops, ventilation, electrical systems, energy efficiency and expansion design.</p></div>
+<div class="service-card"><h3>Continuity & Resilience</h3><p>Backup power, hazard mitigation, flood recovery and redundancy planning.</p></div>
+</div>
+</div>
 </section>
 
+<!-- EXPERIENCE -->
+<section id="experience">
+<div class="container">
+<p class="section-label">Experience</p>
+<h2 class="section-title">Rural‑Relevant Project Experience</h2>
+<div class="divider"></div>
+<p class="section-intro">
+Includes rural‑applicable portions of federal, state, and agency programs
+supporting infrastructure, facilities, energy, and resilience initiatives.
+</p>
+</div>
+</section>
+
+<!-- CONTACT -->
 <section id="contact">
-  <div class="container">
-    <p class="section-label">Contact</p>
-    <h2 class="section-title">JYA Rural Engineering</h2>
-    <div class="divider"></div>
+<div class="container">
+<p class="section-label">Contact</p>
+<h2 class="section-title">Start a Conversation</h2>
+<div class="divider"></div>
 
-    <p>
-      Supporting rural counties, agencies, farms, and building owners across the Midwest
-      and Great Plains.
-    </p>
+<div class="contact-grid">
+<div>
+<p class="section-intro">
+Supporting rural counties, agencies, farms, and building owners
+across the Midwest and Great Plains.
+</p>
 
-    <p>
-      <strong>Email:</strong> john.yonemori.antal@outlook.com<br>
-      <strong>Phone:</strong> 402‑430‑5418
-    </p>
+<div class="contact-info-item">
+<div>Email</div>
+<div><a href="mailto:john@jyainc.com">john@jyainc.com</a></div>
+</div>
 
-    <p>
-      We respond quickly, work efficiently, and deliver clear, actionable engineering guidance.
-    </p>
-  </div>
+<div class="contact-info-item">
+<div>Phone</div>
+<div><a href="tel:+14024305418">(402) 430‑5418</a></div>
+</div>
+</div>
+
+<div class="contact-form">
+<input type="text" placeholder="Your Name" />
+<input type="email" placeholder="Your Email" />
+<textarea placeholder="How can we help?"></textarea>
+<button class="btn btn-primary">Send Message</button>
+</div>
+</div>
 </section>
 
 <footer>
-  © 2026 JYA Inc. — JYA Rural Engineering Division
+© 2026 JYA Inc. All rights reserved.
 </footer>
 
 </body>
