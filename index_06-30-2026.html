@@ -1,0 +1,432 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>JYA Inc. — Local Rural Engineering</title>
+
+<meta name="description" content="Local rural engineering based in Cass County, Nebraska. Serving rural Iowa and Eastern Nebraska with federal-grade engineering support." />
+<meta name="author" content="JYA Inc." />
+
+<style>
+/* ===========================
+JYA CANONICAL TEMPLATE — LOCKED
+EDIT TEXT ONLY
+=========================== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+--navy:#0b1a2e; --slate:#1e2d40; --steel:#3a4f66;
+--accent:#4a90d9; --accent-dim:#3670b0;
+--white:#ffffff; --divider:#2c3e55;
+--text-main:#d0d8e2; --text-muted:#8a9bb0;
+--font-sans:'Segoe UI',system-ui,-apple-system,Helvetica,Arial,sans-serif;
+--font-mono:'Cascadia Code','Consolas',monospace;
+--max-width:1120px; --section-py:5rem;
+}
+
+html { scroll-behavior:smooth; font-size:16px; }
+
+body {
+font-family:var(--font-sans);
+background:var(--navy);
+color:var(--text-main);
+line-height:1.7;
+}
+
+a { color:var(--accent); text-decoration:none; }
+a:hover { color:#fff; }
+
+.container { width:90%; max-width:var(--max-width); margin:0 auto; }
+
+/* NAV */
+nav {
+position:fixed; top:0; left:0; right:0; z-index:100;
+background:rgba(11,26,46,.95);
+border-bottom:1px solid var(--divider);
+}
+
+nav .container {
+display:flex; align-items:center; justify-content:space-between;
+padding:.85rem 0; gap:1rem; flex-wrap:wrap;
+}
+
+.brand { font-size:1.15rem; font-weight:700; color:#fff; letter-spacing:.04em; }
+.brand span { color:var(--accent); }
+
+nav ul { list-style:none; display:flex; gap:1.4rem; flex-wrap:wrap; }
+nav ul li a {
+font-size:.82rem; font-weight:500; color:var(--text-muted);
+text-transform:uppercase; letter-spacing:.08em;
+}
+
+.xnav { display:flex; gap:.5rem; flex-wrap:wrap; }
+.xnav a {
+font-size:.72rem; font-weight:600; color:var(--steel);
+text-transform:uppercase;
+padding:.25rem .45rem;
+border-radius:4px;
+border:1px solid transparent;
+}
+.xnav a.active {
+color:#fff;
+border-color:var(--accent);
+background:rgba(74,144,217,.10);
+}
+
+/* HERO */
+.hero {
+min-height:100vh;
+display:flex; align-items:center;
+text-align:center;
+padding:8rem 0 6rem;
+background:
+radial-gradient(ellipse at 30% 20%, rgba(74,144,217,.08), transparent 60%),
+radial-gradient(ellipse at 70% 80%, rgba(74,144,217,.05), transparent 50%),
+var(--navy);
+}
+
+.hero h1 {
+font-size:clamp(2.2rem,5vw,3.6rem);
+font-weight:700; color:#fff;
+line-height:1.15;
+margin-bottom:1rem;
+}
+.hero h1 span { color:var(--accent); }
+
+.credentials {
+font-family:var(--font-mono);
+font-size:.8rem;
+letter-spacing:.06em;
+text-transform:uppercase;
+color:var(--steel);
+margin-bottom:1.2rem;
+}
+
+.subtitle {
+max-width:760px;
+margin:0 auto 1.25rem;
+color:var(--text-muted);
+}
+
+.cta-row {
+display:flex; gap:1rem;
+justify-content:center;
+flex-wrap:wrap;
+margin-top:1.5rem;
+}
+
+.btn {
+padding:.75rem 2rem;
+font-size:.85rem;
+font-weight:600;
+text-transform:uppercase;
+border-radius:4px;
+}
+.btn-primary { background:var(--accent); color:#fff; }
+.btn-outline { border:1px solid var(--steel); color:var(--text-main); }
+
+/* SECTIONS */
+section { padding:var(--section-py) 0; }
+section:nth-child(even) { background:var(--slate); }
+
+.section-label {
+font-size:.7rem;
+text-transform:uppercase;
+letter-spacing:.16em;
+color:var(--accent);
+margin-bottom:.5rem;
+}
+
+.section-title {
+font-size:clamp(1.5rem,3vw,2rem);
+font-weight:700;
+color:#fff;
+margin-bottom:1rem;
+}
+
+.section-intro {
+max-width:760px;
+margin-bottom:2rem;
+color:var(--text-muted);
+}
+
+.divider {
+width:48px; height:3px;
+background:var(--accent);
+margin-bottom:2rem;
+}
+
+/* LAYOUTS */
+.about-grid {
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:3rem;
+}
+
+.about-text p { margin-bottom:1rem; }
+
+.about-highlights {
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:1.2rem;
+}
+
+.highlight-card {
+background:var(--navy);
+border:1px solid var(--divider);
+border-radius:6px;
+padding:1.4rem;
+}
+
+.highlight-card .number {
+font-size:1.8rem;
+font-weight:700;
+color:var(--accent);
+}
+
+.highlight-card .label {
+font-size:.78rem;
+color:var(--text-muted);
+text-transform:uppercase;
+}
+
+.services-grid {
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:1.5rem;
+}
+
+.service-card {
+background:var(--navy);
+border:1px solid var(--divider);
+border-radius:6px;
+padding:2rem;
+}
+
+.service-card h3 { color:#fff; margin-bottom:.6rem; }
+.service-card p { color:var(--text-muted); font-size:.9rem; }
+
+.contact-grid {
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:3rem;
+}
+
+.contact-info-item {
+display:flex;
+gap:.75rem;
+margin-bottom:1.3rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+width:100%;
+padding:.75rem 1rem;
+margin-bottom:1rem;
+background:var(--navy);
+border:1px solid var(--divider);
+border-radius:4px;
+color:var(--text-main);
+}
+
+footer {
+border-top:1px solid var(--divider);
+padding:2.5rem 0;
+text-align:center;
+font-size:.78rem;
+color:var(--text-muted);
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="container">
+<a class="brand" href="#home">JYA<span>.</span></a>
+
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+<div class="xnav">
+<a href="https://jyainc.com">JYA Inc.</a>
+<a href="https://homes-hear-specialist.com">HOMES / HEAR</a>
+<a href="#" class="active">Rural Engineering</a>
+</div>
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+<div class="container">
+
+<p class="credentials">
+Local Rural Engineering — Based in Cass County, Nebraska<br>
+Serving Rural Iowa &amp; Eastern Nebraska
+</p>
+
+<h1>
+Engineering Support Built for<br>
+<span>Rural Realities</span>
+</h1>
+
+<p class="subtitle">
+JYA Inc. is a Plattsmouth based engineering firm delivering federal grade,
+rural focused engineering support to farms, co‑ops, small municipalities,
+and county operations across Cass County, rural Iowa, and Eastern Nebraska.
+We apply mission critical engineering discipline to real world rural
+infrastructure, agricultural facilities, and operations that must stay
+online during upgrades.
+</p>
+
+<p class="subtitle"><strong>
+Clear guidance. Practical solutions. Built for rural realities.
+</strong></p>
+
+<div class="cta-row">
+<a href="#services" class="btn btn-primary">Explore Services</a>
+<a href="#contact" class="btn btn-outline">Get in Touch</a>
+</div>
+
+</div>
+</section>
+
+<!-- PREVIEW -->
+<section>
+<div class="container">
+<h2 class="section-title">Engineering Support Without Urban Complexity</h2>
+<div class="divider"></div>
+<p class="section-intro">
+Local expertise, fast response, and straightforward technical guidance for
+counties, public works teams, and agricultural operators — without large
+firm overhead or delays.
+</p>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+<div class="container">
+<p class="section-label">About</p>
+<h2 class="section-title">Rural Engineering Without Urban Complexity</h2>
+<div class="divider"></div>
+
+<div class="about-grid">
+<div class="about-text">
+<p>
+JYA Inc. provides engineering support for rural counties, municipalities,
+state and federal programs, farms, co‑ops, and private rural building owners.
+</p>
+<p>
+We support public works departments, roads crews, facility managers, and
+agricultural operators who require clear, reliable technical guidance
+without large firm overhead.
+</p>
+</div>
+
+<div class="about-highlights">
+<div class="highlight-card"><div class="number">Rural</div><div class="label">Focused Practice</div></div>
+<div class="highlight-card"><div class="number">Federal</div><div class="label">Discipline Applied</div></div>
+<div class="highlight-card"><div class="number">Ag & Infra</div><div class="label">Expertise</div></div>
+<div class="highlight-card"><div class="number">Ops</div><div class="label">Continuity Priority</div></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- WHY LOCAL -->
+<section>
+<div class="container">
+<h2 class="section-title">Why Local Matters</h2>
+<div class="divider"></div>
+
+<ul class="section-intro">
+<li>Freeze–thaw impacts on buildings, utilities, and pavements</li>
+<li>Aging rural infrastructure with limited documentation</li>
+<li>Agricultural operations that cannot shut down for upgrades</li>
+<li>County budgets, procurement rules, and staffing constraints</li>
+<li>Small‑town utilities needing practical solutions</li>
+<li>Flooding and river‑community resilience needs</li>
+</ul>
+
+<p class="section-intro">
+<strong>Rooted in Cass County. Built for Rural Work.</strong><br>
+We live and work in the same communities we support — delivering better
+engineering outcomes through local understanding.
+</p>
+</div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+<div class="container">
+<p class="section-label">Services</p>
+<h2 class="section-title">Rural Engineering Services</h2>
+<div class="divider"></div>
+
+<div class="services-grid">
+<div class="service-card"><h3>3D Scanning &amp; As‑Builts</h3><p>LiDAR scanning, point clouds, existing conditions documentation.</p></div>
+<div class="service-card"><h3>Infrastructure &amp; Facilities</h3><p>Condition assessments, MEP modernization, compliance planning.</p></div>
+<div class="service-card"><h3>Agricultural Facilities</h3><p>Barns, grain elevators, shops, ventilation, utility systems.</p></div>
+<div class="service-card"><h3>Energy &amp; Cost Reduction</h3><p>Heat pumps, solar feasibility, utility coordination, incentives.</p></div>
+<div class="service-card"><h3>Resilience &amp; Planning</h3><p>Flood recovery, hazard mitigation, redundancy systems.</p></div>
+</div>
+</div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+<div class="container">
+<p class="section-label">Experience</p>
+<h2 class="section-title">Rural Relevant Federal &amp; Field Experience</h2>
+<div class="divider"></div>
+<p class="section-intro">
+Experience aligned with USDA Rural Development, FEMA, state programs,
+and federal mission critical environments — applied to rural infrastructure,
+utilities, facilities, renewables, and long‑range resilience planning.
+</p>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<div class="container">
+<p class="section-label">Contact</p>
+<h2 class="section-title">Get in Touch</h2>
+<div class="divider"></div>
+
+<div class="contact-grid">
+<div>
+<p class="section-intro">
+Local to Plattsmouth, Nebraska and serving Cass County, rural Iowa,
+and Eastern Nebraska.
+</p>
+
+<div class="contact-info-item"><div>Email</div><div><a href="mailto:john@jyainc.com">john@jyainc.com</a></div></div>
+<div class="contact-info-item"><div>Phone</div><div><a href="tel:+14024305418">(402) 430‑5418</a></div></div>
+<div class="contact-info-item"><div>Office</div><div>Plattsmouth, Nebraska</div></div>
+<div class="contact-info-item"><div>Registrations</div><div>Licensed &amp; Registered as Required</div></div>
+</div>
+
+<div class="contact-form">
+<input type="text" placeholder="Your Name" />
+<input type="email" placeholder="Your Email" />
+<textarea placeholder="How can we help?"></textarea>
+<button class="btn btn-primary">Send Message</button>
+</div>
+</div>
+</div>
+</section>
+
+<footer>
+© 2026 JYA Inc. — Local Rural Engineering
+</footer>
+
+</body>
+</html>
