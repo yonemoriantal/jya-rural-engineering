@@ -1,84 +1,136 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>JYA Inc. — Local Rural Engineering</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="Local rural engineering based in Cass County, Nebraska. Serving rural Iowa and Eastern Nebraska with federal-grade engineering support." />
-<meta name="author" content="JYA Inc." />
+<title>JYA Inc. | Rural Infrastructure, Construction Cost Analysis & Owner Advisory</title>
+
+<meta name="description" content="JYA Inc. provides rural infrastructure planning, construction cost analysis, facility assessments, owner advisory services, and A&E teaming support for public, agricultural, utility, and federal projects.">
+
+<meta name="author" content="JYA Inc.">
 
 <style>
-/* ===========================
-JYA CANONICAL TEMPLATE — LOCKED
-EDIT TEXT ONLY
-=========================== */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-:root {
---navy:#0b1a2e; --slate:#1e2d40; --steel:#3a4f66;
---accent:#4a90d9; --accent-dim:#3670b0;
---white:#ffffff; --divider:#2c3e55;
---text-main:#d0d8e2; --text-muted:#8a9bb0;
---font-sans:'Segoe UI',system-ui,-apple-system,Helvetica,Arial,sans-serif;
---font-mono:'Cascadia Code','Consolas',monospace;
---max-width:1120px; --section-py:5rem;
+*,
+*::before,
+*::after{
+box-sizing:border-box;
+margin:0;
+padding:0;
 }
 
-html { scroll-behavior:smooth; font-size:16px; }
+:root{
+--navy:#0b1a2e;
+--slate:#1e2d40;
+--steel:#3a4f66;
+--accent:#4a90d9;
+--accent-dim:#3670b0;
+--divider:#2c3e55;
+--text-main:#d0d8e2;
+--text-muted:#8a9bb0;
+--font-sans:'Segoe UI',system-ui,-apple-system,Helvetica,Arial,sans-serif;
+--max-width:1120px;
+--section-py:5rem;
+}
 
-body {
+html{
+scroll-behavior:smooth;
+}
+
+body{
 font-family:var(--font-sans);
 background:var(--navy);
 color:var(--text-main);
 line-height:1.7;
 }
 
-a { color:var(--accent); text-decoration:none; }
-a:hover { color:#fff; }
+a{
+color:var(--accent);
+text-decoration:none;
+}
 
-.container { width:90%; max-width:var(--max-width); margin:0 auto; }
+a:hover{
+color:#fff;
+}
 
-/* NAV */
-nav {
-position:fixed; top:0; left:0; right:0; z-index:100;
-background:rgba(11,26,46,.95);
+.container{
+width:90%;
+max-width:var(--max-width);
+margin:0 auto;
+}
+
+nav{
+position:fixed;
+top:0;
+left:0;
+right:0;
+z-index:100;
+background:rgba(11,26,46,.96);
 border-bottom:1px solid var(--divider);
 }
 
-nav .container {
-display:flex; align-items:center; justify-content:space-between;
-padding:.85rem 0; gap:1rem; flex-wrap:wrap;
+nav .container{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:.85rem 0;
+gap:1rem;
+flex-wrap:wrap;
 }
 
-.brand { font-size:1.15rem; font-weight:700; color:#fff; letter-spacing:.04em; }
-.brand span { color:var(--accent); }
-
-nav ul { list-style:none; display:flex; gap:1.4rem; flex-wrap:wrap; }
-nav ul li a {
-font-size:.82rem; font-weight:500; color:var(--text-muted);
-text-transform:uppercase; letter-spacing:.08em;
+.brand{
+font-size:1.15rem;
+font-weight:700;
+color:#fff;
+letter-spacing:.04em;
 }
 
-.xnav { display:flex; gap:.5rem; flex-wrap:wrap; }
-.xnav a {
-font-size:.72rem; font-weight:600; color:var(--steel);
+.brand span{
+color:var(--accent);
+}
+
+nav ul{
+list-style:none;
+display:flex;
+gap:1.4rem;
+flex-wrap:wrap;
+}
+
+nav ul li a{
+font-size:.82rem;
+font-weight:500;
+color:var(--text-muted);
+text-transform:uppercase;
+letter-spacing:.08em;
+}
+
+.xnav{
+display:flex;
+gap:.5rem;
+flex-wrap:wrap;
+}
+
+.xnav a{
+font-size:.72rem;
+font-weight:600;
+color:var(--steel);
 text-transform:uppercase;
 padding:.25rem .45rem;
 border-radius:4px;
-border:1px solid transparent;
 }
-.xnav a.active {
+
+.xnav a.active{
 color:#fff;
-border-color:var(--accent);
+border:1px solid var(--accent);
 background:rgba(74,144,217,.10);
 }
 
 /* HERO */
-.hero {
+
+.hero{
 min-height:100vh;
-display:flex; align-items:center;
+display:flex;
+align-items:center;
 text-align:center;
 padding:8rem 0 6rem;
 background:
@@ -87,51 +139,69 @@ radial-gradient(ellipse at 70% 80%, rgba(74,144,217,.05), transparent 50%),
 var(--navy);
 }
 
-.hero h1 {
-font-size:clamp(2.2rem,5vw,3.6rem);
-font-weight:700; color:#fff;
-line-height:1.15;
-margin-bottom:1rem;
-}
-.hero h1 span { color:var(--accent); }
-
-.credentials {
-font-family:var(--font-mono);
+.credentials{
 font-size:.8rem;
-letter-spacing:.06em;
+letter-spacing:.08em;
 text-transform:uppercase;
 color:var(--steel);
-margin-bottom:1.2rem;
+margin-bottom:1.25rem;
 }
 
-.subtitle {
+.hero h1{
+font-size:clamp(2.4rem,5vw,4rem);
+font-weight:700;
+line-height:1.1;
+margin-bottom:1rem;
+color:#fff;
+}
+
+.hero h1 span{
+color:var(--accent);
+}
+
+.subtitle{
 max-width:760px;
-margin:0 auto 1.25rem;
+margin:0 auto 1.2rem;
 color:var(--text-muted);
 }
 
-.cta-row {
-display:flex; gap:1rem;
+.cta-row{
+display:flex;
 justify-content:center;
-flex-wrap:wrap;
+gap:1rem;
 margin-top:1.5rem;
+flex-wrap:wrap;
 }
 
-.btn {
-padding:.75rem 2rem;
-font-size:.85rem;
+.btn{
+display:inline-block;
+padding:.8rem 2rem;
+border-radius:4px;
 font-weight:600;
 text-transform:uppercase;
-border-radius:4px;
 }
-.btn-primary { background:var(--accent); color:#fff; }
-.btn-outline { border:1px solid var(--steel); color:var(--text-main); }
+
+.btn-primary{
+background:var(--accent);
+color:#fff;
+}
+
+.btn-outline{
+border:1px solid var(--steel);
+color:var(--text-main);
+}
 
 /* SECTIONS */
-section { padding:var(--section-py) 0; }
-section:nth-child(even) { background:var(--slate); }
 
-.section-label {
+section{
+padding:var(--section-py) 0;
+}
+
+section:nth-of-type(even){
+background:var(--slate);
+}
+
+.section-label{
 font-size:.7rem;
 text-transform:uppercase;
 letter-spacing:.16em;
@@ -139,104 +209,124 @@ color:var(--accent);
 margin-bottom:.5rem;
 }
 
-.section-title {
+.section-title{
 font-size:clamp(1.5rem,3vw,2rem);
-font-weight:700;
 color:#fff;
 margin-bottom:1rem;
 }
 
-.section-intro {
+.section-intro{
 max-width:760px;
 margin-bottom:2rem;
 color:var(--text-muted);
 }
 
-.divider {
-width:48px; height:3px;
+.divider{
+width:48px;
+height:3px;
 background:var(--accent);
 margin-bottom:2rem;
 }
 
-/* LAYOUTS */
-.about-grid {
+/* ABOUT */
+
+.about-grid{
 display:grid;
 grid-template-columns:1fr 1fr;
 gap:3rem;
 }
 
-.about-text p { margin-bottom:1rem; }
-
-.about-highlights {
+.about-highlights{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:1.2rem;
+gap:1rem;
 }
 
-.highlight-card {
+.highlight-card,
+.service-card{
 background:var(--navy);
 border:1px solid var(--divider);
 border-radius:6px;
-padding:1.4rem;
+padding:1.5rem;
 }
 
-.highlight-card .number {
+.highlight-card .number{
 font-size:1.8rem;
 font-weight:700;
 color:var(--accent);
 }
 
-.highlight-card .label {
-font-size:.78rem;
-color:var(--text-muted);
+.highlight-card .label{
+font-size:.8rem;
 text-transform:uppercase;
+color:var(--text-muted);
 }
 
-.services-grid {
+/* SERVICES */
+
+.services-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:1.5rem;
 }
 
-.service-card {
-background:var(--navy);
-border:1px solid var(--divider);
-border-radius:6px;
-padding:2rem;
+.service-card h3{
+color:#fff;
+margin-bottom:.5rem;
 }
 
-.service-card h3 { color:#fff; margin-bottom:.6rem; }
-.service-card p { color:var(--text-muted); font-size:.9rem; }
+.service-card p{
+color:var(--text-muted);
+}
 
-.contact-grid {
+/* CONTACT */
+
+.contact-grid{
 display:grid;
 grid-template-columns:1fr 1fr;
 gap:3rem;
 }
 
-.contact-info-item {
-display:flex;
-gap:.75rem;
-margin-bottom:1.3rem;
-}
-
 .contact-form input,
-.contact-form textarea {
+.contact-form textarea{
 width:100%;
-padding:.75rem 1rem;
+padding:.8rem;
 margin-bottom:1rem;
 background:var(--navy);
 border:1px solid var(--divider);
 border-radius:4px;
-color:var(--text-main);
+color:#fff;
+font-family:var(--font-sans);
 }
 
-footer {
+.contact-form textarea{
+min-height:140px;
+resize:vertical;
+}
+
+footer{
 border-top:1px solid var(--divider);
-padding:2.5rem 0;
+padding:2rem;
 text-align:center;
-font-size:.78rem;
+font-size:.8rem;
 color:var(--text-muted);
+}
+
+@media (max-width:768px){
+
+.about-grid,
+.contact-grid{
+grid-template-columns:1fr;
+}
+
+.about-highlights{
+grid-template-columns:1fr;
+}
+
+nav .container{
+flex-direction:column;
+align-items:flex-start;
+}
 }
 </style>
 </head>
@@ -245,7 +335,10 @@ color:var(--text-muted);
 
 <nav>
 <div class="container">
-<a class="brand" href="#home">JYA<span>.</span></a>
+
+<a class="brand" href="#home">
+JYA<span>.</span>
+</a>
 
 <ul>
 <li><a href="#about">About</a></li>
@@ -257,175 +350,247 @@ color:var(--text-muted);
 <div class="xnav">
 <a href="https://jyainc.com">JYA Inc.</a>
 <a href="https://homes-hear-specialist.com">HOMES / HEAR</a>
-<a href="#" class="active">Rural Engineering</a>
+<a href="#home" class="active">Rural Advisory</a>
 </div>
+
 </div>
 </nav>
 
-<!-- HERO -->
 <section class="hero" id="home">
+
 <div class="container">
 
 <p class="credentials">
-Local Rural Engineering — Based in Cass County, Nebraska<br>
-Serving Rural Iowa &amp; Eastern Nebraska
+Rural Infrastructure • Construction Cost Analysis • Owner Advisory Services
 </p>
 
 <h1>
-Engineering Support Built for<br>
-<span>Rural Realities</span>
+Infrastructure Planning &amp;
+<span>Owner Advisory for Rural Projects</span>
 </h1>
 
 <p class="subtitle">
-JYA Inc. is a Plattsmouth based engineering firm delivering federal grade,
-rural focused engineering support to farms, co‑ops, small municipalities,
-and county operations across Cass County, rural Iowa, and Eastern Nebraska.
-We apply mission critical engineering discipline to real world rural
-infrastructure, agricultural facilities, and operations that must stay
-online during upgrades.
+JYA Inc. helps municipalities, utilities, agricultural operations,
+public agencies, and private owners make informed infrastructure decisions
+through facility assessments, construction cost analysis, capital planning,
+and mission-critical project experience.
 </p>
 
-<p class="subtitle"><strong>
-Clear guidance. Practical solutions. Built for rural realities.
-</strong></p>
+<p class="subtitle">
+<strong>
+Clear scope. Defensible budgets. Practical guidance.
+</strong>
+</p>
 
 <div class="cta-row">
 <a href="#services" class="btn btn-primary">Explore Services</a>
-<a href="#contact" class="btn btn-outline">Get in Touch</a>
+<a href="#contact" class="btn btn-outline">Get In Touch</a>
 </div>
 
 </div>
+
 </section>
 
-<!-- PREVIEW -->
 <section>
+
 <div class="container">
-<h2 class="section-title">Engineering Support Without Urban Complexity</h2>
+
+<h2 class="section-title">
+Federal-Grade Discipline for Rural Infrastructure Decisions
+</h2>
+
 <div class="divider"></div>
+
 <p class="section-intro">
-Local expertise, fast response, and straightforward technical guidance for
-counties, public works teams, and agricultural operators — without large
-firm overhead or delays.
+We help owners understand existing conditions, evaluate options,
+validate budgets, and make informed decisions before design and construction begin.
 </p>
+
 </div>
+
 </section>
 
-<!-- ABOUT -->
 <section id="about">
+
 <div class="container">
+
 <p class="section-label">About</p>
-<h2 class="section-title">Rural Engineering Without Urban Complexity</h2>
+
+<h2 class="section-title">
+Owner-Focused Infrastructure Advisory
+</h2>
+
 <div class="divider"></div>
 
 <div class="about-grid">
-<div class="about-text">
-<p>
-JYA Inc. provides engineering support for rural counties, municipalities,
-state and federal programs, farms, co‑ops, and private rural building owners.
+
+<div>
+
+<p class="section-intro">
+JYA Inc. supports counties, municipalities, utilities, state and federal programs,
+agricultural operations, and private facility owners with practical technical guidance.
 </p>
-<p>
-We support public works departments, roads crews, facility managers, and
-agricultural operators who require clear, reliable technical guidance
-without large firm overhead.
+
+<p class="section-intro">
+Our work focuses on infrastructure planning, facility assessments,
+construction cost analysis, and owner advisory services.
 </p>
+
 </div>
 
 <div class="about-highlights">
-<div class="highlight-card"><div class="number">Rural</div><div class="label">Focused Practice</div></div>
-<div class="highlight-card"><div class="number">Federal</div><div class="label">Discipline Applied</div></div>
-<div class="highlight-card"><div class="number">Ag & Infra</div><div class="label">Expertise</div></div>
-<div class="highlight-card"><div class="number">Ops</div><div class="label">Continuity Priority</div></div>
+
+<div class="highlight-card">
+<div class="number">Rural</div>
+<div class="label">Infrastructure Focus</div>
 </div>
+
+<div class="highlight-card">
+<div class="number">Cost</div>
+<div class="label">Analysis Support</div>
 </div>
+
+<div class="highlight-card">
+<div class="number">Owner</div>
+<div class="label">Advisory Services</div>
 </div>
+
+<div class="highlight-card">
+<div class="number">Federal</div>
+<div class="label">Project Discipline</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
-<!-- WHY LOCAL -->
-<section>
-<div class="container">
-<h2 class="section-title">Why Local Matters</h2>
-<div class="divider"></div>
-
-<ul class="section-intro">
-<li>Freeze–thaw impacts on buildings, utilities, and pavements</li>
-<li>Aging rural infrastructure with limited documentation</li>
-<li>Agricultural operations that cannot shut down for upgrades</li>
-<li>County budgets, procurement rules, and staffing constraints</li>
-<li>Small‑town utilities needing practical solutions</li>
-<li>Flooding and river‑community resilience needs</li>
-</ul>
-
-<p class="section-intro">
-<strong>Rooted in Cass County. Built for Rural Work.</strong><br>
-We live and work in the same communities we support — delivering better
-engineering outcomes through local understanding.
-</p>
-</div>
-</section>
-
-<!-- SERVICES -->
 <section id="services">
+
 <div class="container">
+
 <p class="section-label">Services</p>
-<h2 class="section-title">Rural Engineering Services</h2>
+
+<h2 class="section-title">
+Infrastructure, Cost Analysis &amp; Advisory
+</h2>
+
 <div class="divider"></div>
 
 <div class="services-grid">
-<div class="service-card"><h3>3D Scanning &amp; As‑Builts</h3><p>LiDAR scanning, point clouds, existing conditions documentation.</p></div>
-<div class="service-card"><h3>Infrastructure &amp; Facilities</h3><p>Condition assessments, MEP modernization, compliance planning.</p></div>
-<div class="service-card"><h3>Agricultural Facilities</h3><p>Barns, grain elevators, shops, ventilation, utility systems.</p></div>
-<div class="service-card"><h3>Energy &amp; Cost Reduction</h3><p>Heat pumps, solar feasibility, utility coordination, incentives.</p></div>
-<div class="service-card"><h3>Resilience &amp; Planning</h3><p>Flood recovery, hazard mitigation, redundancy systems.</p></div>
+
+<div class="service-card">
+<h3>Infrastructure Planning</h3>
+<p>Facility assessments, infrastructure reviews, capital planning, and modernization strategy.</p>
 </div>
+
+<div class="service-card">
+<h3>Construction Cost Analysis</h3>
+<p>Budget validation, estimate review, scope-to-budget alignment, and project planning support.</p>
 </div>
+
+<div class="service-card">
+<h3>Owner Advisory Services</h3>
+<p>Owner-side project guidance, procurement support, coordination, and decision support.</p>
+</div>
+
+<div class="service-card">
+<h3>Facility Assessments</h3>
+<p>Existing conditions documentation, asset evaluation, and lifecycle planning.</p>
+</div>
+
+<div class="service-card">
+<h3>3D Scanning &amp; Documentation</h3>
+<p>LiDAR scanning, point-cloud development, field verification, and as-built support.</p>
+</div>
+
+<div class="service-card">
+<h3>A&amp;E Teaming Support</h3>
+<p>Specialty consulting support for architecture and engineering firms pursuing public and infrastructure projects.</p>
+</div>
+
+</div>
+
+</div>
+
 </section>
 
-<!-- EXPERIENCE -->
 <section id="experience">
-<div class="container">
-<p class="section-label">Experience</p>
-<h2 class="section-title">Rural Relevant Federal &amp; Field Experience</h2>
-<div class="divider"></div>
-<p class="section-intro">
-Experience aligned with USDA Rural Development, FEMA, state programs,
-and federal mission critical environments — applied to rural infrastructure,
-utilities, facilities, renewables, and long‑range resilience planning.
-</p>
-</div>
-</section>
 
-<!-- CONTACT -->
-<section id="contact">
 <div class="container">
+
+<p class="section-label">Experience</p>
+
+<h2 class="section-title">
+Federal &amp; Mission-Critical Experience
+</h2>
+
+<div class="divider"></div>
+
+<p class="section-intro">
+Experience aligned with infrastructure modernization, capital improvement planning,
+facility assessments, resiliency initiatives, and mission-critical environments.
+</p>
+
+<p class="section-intro">
+Available to support owners directly/section>
+
+<section id="contact">
+
+<div class="container">
+
 <p class="section-label">Contact</p>
-<h2 class="section-title">Get in Touch</h2>
+
+<h2 class="section-title">
+Start a Conversation
+</h2>
+
 <div class="divider"></div>
 
 <div class="contact-grid">
+
 <div>
+
 <p class="section-intro">
-Local to Plattsmouth, Nebraska and serving Cass County, rural Iowa,
-and Eastern Nebraska.
+<strong>Email:</strong><br>
+<a href="mailto:jyainc@outlook.com">jyainc@outlook.com</a>
 </p>
 
-<div class="contact-info-item"><div>Email</div><div><a href="mailto:john@jyainc.com">john@jyainc.com</a></div></div>
-<div class="contact-info-item"><div>Phone</div><div><a href="tel:+14024305418">(402) 430‑5418</a></div></div>
-<div class="contact-info-item"><div>Office</div><div>Plattsmouth, Nebraska</div></div>
-<div class="contact-info-item"><div>Registrations</div><div>Licensed &amp; Registered as Required</div></div>
+<p class="section-intro">
+<strong>Phone:</strong><br>
+tel:+14024305418(402) 430-5418</a>
+</p>
+
+<p class="section-intro">
+<strong>Location:</strong><br>
+Plattsmouth, Nebraska
+</p>
+
+<p class="section-intro">
+<strong>Focus:</strong><br>
+Rural Infrastructure • Construction Cost Analysis • Owner Advisory Services
+</p>
+
 </div>
 
-<div class="contact-form">
-<input type="text" placeholder="Your Name" />
-<input type="email" placeholder="Your Email" />
-<textarea placeholder="How can we help?"></textarea>
-<button class="btn btn-primary">Send Message</button>
+<form class="contact-form">
+<input type="text" placeholder="Your Name">
+<input type="email" placeholder="Your Email">
+<textarea placeholder="Tell us about your project"></textarea>
+<button type="submit" class="btn btn-primary">Send Message</button>
+</form>
+
 </div>
+
 </div>
-</div>
+
 </section>
 
 <footer>
-© 2026 JYA Inc. — Local Rural Engineering
+© 2026 JYA Inc. — Rural Infrastructure • Construction Cost Analysis • Owner Advisory Services
 </footer>
 
 </body>
