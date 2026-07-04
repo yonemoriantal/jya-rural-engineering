@@ -1,550 +1,319 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>JYA Inc. — Mission-Critical Project Controls</title>
-  <meta name="description" content="JYA Inc. provides mission-critical project controls, federal contractor integration, BIM/VDC strategy, cost engineering, and compliance-aligned documentation for high-assurance programs worldwide." />
-  <meta name="keywords" content="JYA Inc, project controls, federal contracting, BIM, VDC, cost engineering, TS/SCI, LEED, mission-critical, Omaha, Nebraska" />
-  <meta name="author" content="JYA Inc." />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --navy: #0b1a2e;
-      --slate: #1e2d40;
-      --steel: #3a4f66;
-      --accent: #4a90d9;
-      --white: #ffffff;
-      --divider: #2c3e55;
-      --text-main: #d0d8e2;
-      --text-muted: #8a9bb0;
-      --max-width: 1120px;
-    }
-    html { scroll-behavior: smooth; font-size: 16px; }
-    body {
-      font-family: 'Segoe UI', system-ui, -apple-system, Helvetica, Arial, sans-serif;
-      background: var(--navy);
-      color: var(--text-main);
-      line-height: 1.7;
-    }
-    a { color: var(--accent); text-decoration: none; transition: color .2s; }
-    a:hover { color: var(--white); }
-    .container { width: 90%; max-width: var(--max-width); margin: 0 auto; }
+<title>JYA Inc. — Rural Engineering & Infrastructure Support</title>
 
-    /* NAVIGATION */
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 100;
-      background: rgba(11, 26, 46, .92);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--divider);
-    }
+<meta name="description" content="Rural engineering and technical consulting for counties, agencies, farms, and rural building owners. Infrastructure, agriculture, facilities, energy modeling, and resilience." />
+<meta name="author" content="JYA Inc." />
 
-    .nav-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: .85rem 0;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --navy:#0b1a2e; --slate:#1e2d40; --steel:#3a4f66;
+  --accent:#4a90d9; --accent-dim:#3670b0;
+  --white:#ffffff; --divider:#2c3e55;
+  --text-main:#d0d8e2; --text-muted:#8a9bb0;
+  --max-width:1120px;
+}
+html { scroll-behavior:smooth; font-size:16px; }
+body {
+  font-family:'Segoe UI',system-ui,-apple-system,Helvetica,Arial,sans-serif;
+  background:var(--navy);
+  color:var(--text-main);
+  line-height:1.7;
+}
+a { color:var(--accent); text-decoration:none; }
+a:hover { color:var(--white); }
+.container { width:90%; max-width:var(--max-width); margin:0 auto; }
 
-    .brand {
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: var(--white);
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      white-space: nowrap;
-      text-decoration: none;
-    }
-    .brand span { color: var(--accent); }
+/* NAV */
+nav {
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  background:rgba(11,26,46,.95);
+  border-bottom:1px solid var(--divider);
+}
+nav .container {
+  display:flex; align-items:center; justify-content:space-between;
+  padding:.85rem 0; gap:1rem; flex-wrap:wrap;
+}
+.brand { font-size:1.15rem; font-weight:700; color:#fff; letter-spacing:.04em; }
+.brand span { color:var(--accent); }
+nav ul { list-style:none; display:flex; gap:1.35rem; flex-wrap:wrap; }
+nav ul li a {
+  font-size:.82rem; font-weight:500; color:var(--text-muted);
+  text-transform:uppercase; letter-spacing:.08em;
+}
+nav ul li a:hover { color:#fff; }
 
-    .nav-menu {
-      list-style: none;
-      display: flex;
-      gap: 1.35rem;
-      flex-wrap: nowrap;
-      align-items: center;
-    }
+/* HERO */
+.hero {
+  min-height:100vh;
+  display:flex; align-items:center; justify-content:center;
+  text-align:center;
+  padding:8rem 0 6rem;
+  background:
+    radial-gradient(ellipse at 30% 20%, rgba(74,144,217,.08), transparent 60%),
+    radial-gradient(ellipse at 70% 80%, rgba(74,144,217,.05), transparent 50%),
+    var(--navy);
+}
+.hero h1 {
+  font-size:clamp(2.2rem,5vw,3.6rem);
+  font-weight:700; color:#fff;
+  line-height:1.15; margin-bottom:1rem;
+}
+.hero h1 span { color:var(--accent); }
+.hero .subtitle {
+  font-size:clamp(1rem,2vw,1.25rem);
+  color:var(--text-muted);
+  max-width:760px; margin:0 auto 1.5rem;
+}
+.hero .credentials {
+  font-size:.8rem; color:var(--steel);
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  font-family:'Cascadia Code',monospace;
+  margin-bottom:1.5rem;
+}
+.cta-row {
+  display:flex; gap:1rem; justify-content:center;
+  flex-wrap:wrap; margin-top:1.5rem;
+}
+.btn {
+  display:inline-block; padding:.75rem 2rem;
+  font-size:.85rem; font-weight:600;
+  letter-spacing:.04em; text-transform:uppercase;
+  border-radius:4px;
+}
+.btn-primary { background:var(--accent); color:#fff; }
+.btn-primary:hover { background:var(--accent-dim); }
+.btn-outline {
+  border:1px solid var(--steel);
+  color:var(--text-main);
+}
+.btn-outline:hover {
+  border-color:var(--accent);
+  color:#fff;
+}
 
-    .nav-menu li a {
-      font-size: .82rem;
-      font-weight: 500;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: .08em;
-      white-space: nowrap;
-    }
-    .nav-menu li a:hover { color: var(--white); }
+/* SECTIONS */
+section { padding:5rem 0; }
+section:nth-child(even) { background:var(--slate); }
+.section-label {
+  font-size:.7rem; text-transform:uppercase;
+  letter-spacing:.16em; color:var(--accent);
+  margin-bottom:.5rem;
+}
+.section-title {
+  font-size:clamp(1.5rem,3vw,2rem);
+  font-weight:700; color:#fff;
+  margin-bottom:1rem;
+}
+.section-intro {
+  max-width:760px;
+  color:var(--text-muted);
+  margin-bottom:2.5rem;
+}
+.divider {
+  width:48px; height:3px;
+  background:var(--accent);
+  margin-bottom:2rem;
+}
 
-    .nav-toggle {
-      display: none;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: .25rem;
-    }
-    .nav-toggle span {
-      display: block;
-      width: 22px;
-      height: 2px;
-      background: var(--text-main);
-      margin: 5px 0;
-    }
+/* LAYOUTS */
+.about-grid { display:grid; grid-template-columns:1fr 1fr; gap:3rem; }
+.about-text p { margin-bottom:1rem; }
+.about-highlights { display:grid; grid-template-columns:1fr 1fr; gap:1.2rem; }
+.highlight-card {
+  background:var(--navy); border:1px solid var(--divider);
+  border-radius:6px; padding:1.4rem;
+}
+.highlight-card .number { font-size:1.8rem; font-weight:700; color:var(--accent); }
+.highlight-card .label { font-size:.78rem; color:var(--text-muted); text-transform:uppercase; }
 
-    @media (max-width: 900px) {
-      .nav-toggle { display: block; }
-      .nav-menu {
-        display: none;
-        width: 100%;
-        flex-direction: column;
-        padding: 1rem 0;
-        gap: .8rem;
-        order: 3;
-      }
-      .nav-menu.open { display: flex; }
-    }
+.services-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:1.5rem; }
+.service-card {
+  background:var(--navy); border:1px solid var(--divider);
+  border-radius:6px; padding:2rem;
+}
+.service-card h3 { color:#fff; margin-bottom:.6rem; }
+.service-card p { color:var(--text-muted); font-size:.9rem; }
 
-    /* HERO */
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 8rem 0 6rem;
-      background:
-        radial-gradient(ellipse at 30% 20%, rgba(74,144,217,.08) 0%, transparent 60%),
-        radial-gradient(ellipse at 70% 80%, rgba(74,144,217,.05) 0%, transparent 50%),
-        var(--navy);
-    }
-    .hero h1 {
-      font-size: clamp(2.2rem, 5vw, 3.6rem);
-      font-weight: 700;
-      color: var(--white);
-      line-height: 1.15;
-      margin-bottom: 1rem;
-    }
-    .hero h1 span { color: var(--accent); }
-    .hero .subtitle {
-      font-size: clamp(1rem, 2vw, 1.25rem);
-      color: var(--text-muted);
-      max-width: 680px;
-      margin: 0 auto 1.5rem;
-      line-height: 1.65;
-    }
-    .hero .credentials {
-      font-size: .8rem;
-      color: var(--steel);
-      letter-spacing: .06em;
-      text-transform: uppercase;
-      font-family: 'Cascadia Code', monospace;
-      margin-bottom: 2.5rem;
-    }
-    .hero .cta-row {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    .btn {
-      display: inline-block;
-      padding: 0.85rem 2.2rem;
-      border-radius: 4px;
-      font-size: .85rem;
-      font-weight: 600;
-      letter-spacing: .04em;
-      text-transform: uppercase;
-      transition: all .3s ease;
-    }
-    .btn-primary { background: var(--accent); color: var(--white); }
-    .btn-primary:hover { background: #3670b0; transform: translateY(-2px); }
-    .btn-outline {
-      border: 1px solid var(--steel);
-      color: var(--text-main);
-      background: transparent;
-    }
-    .btn-outline:hover { background: var(--steel); color: var(--white); border-color: var(--accent); }
+.contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:3rem; }
+.contact-info-item { display:flex; gap:.75rem; margin-bottom:1.3rem; }
+.contact-form input, .contact-form textarea {
+  width:100%; padding:.75rem 1rem; margin-bottom:1rem;
+  background:var(--navy); border:1px solid var(--divider);
+  border-radius:4px; color:var(--text-main);
+}
 
-    /* SECTIONS */
-    section { padding: 5rem 0; }
-    section:nth-child(even) { background: var(--slate); }
-    .section-label {
-      font-size: .7rem;
-      text-transform: uppercase;
-      letter-spacing: .16em;
-      color: var(--accent);
-      font-weight: 600;
-      margin-bottom: .5rem;
-    }
-    .section-title {
-      font-size: clamp(1.5rem, 3vw, 2rem);
-      font-weight: 700;
-      color: var(--white);
-      margin-bottom: 1rem;
-    }
-    .section-intro {
-      max-width: 720px;
-      color: var(--text-muted);
-      margin-bottom: 2.5rem;
-      line-height: 1.7;
-    }
-    .divider {
-      width: 48px;
-      height: 3px;
-      background: var(--accent);
-      border-radius: 2px;
-      margin-bottom: 2rem;
-    }
-
-    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
-    .about-text p { margin-bottom: 1rem; }
-    .about-highlights { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
-    .highlight-card {
-      background: var(--navy);
-      border: 1px solid var(--divider);
-      border-radius: 6px;
-      padding: 1.4rem;
-    }
-    .highlight-card .number { font-size: 1.8rem; font-weight: 700; color: var(--accent); }
-    .highlight-card .label { font-size: .78rem; color: var(--text-muted); margin-top: .35rem; text-transform: uppercase; letter-spacing: .06em; }
-    @media (max-width: 768px) { .about-grid { grid-template-columns: 1fr; } }
-
-    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
-    .service-card {
-      background: var(--navy);
-      border: 1px solid var(--divider);
-      border-radius: 6px;
-      padding: 2rem;
-      transition: border-color .3s;
-    }
-    .service-card:hover { border-color: var(--accent); }
-    .service-card h3 { font-size: 1.05rem; font-weight: 600; color: var(--white); margin-bottom: .6rem; }
-    .service-card p { font-size: .9rem; color: var(--text-muted); }
-    .service-icon {
-      width: 40px; height: 40px;
-      display: flex; align-items: center; justify-content: center;
-      background: rgba(74,144,217,.1);
-      border-radius: 8px;
-      margin-bottom: 1rem;
-      color: var(--accent);
-      font-size: 1.1rem;
-    }
-
-    .cap-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
-    .cap-item {
-      display: flex; align-items: center; gap: .75rem;
-      padding: 1rem 1.2rem;
-      border-radius: 6px;
-      background: var(--slate);
-      border: 1px solid var(--divider);
-    }
-    .cap-item .cap-icon { color: var(--accent); font-size: 1rem; flex-shrink: 0; }
-    .cap-item span { font-size: .88rem; color: var(--text-main); }
-
-    .table-wrap { overflow-x: auto; }
-    table { width: 100%; border-collapse: collapse; font-size: .85rem; }
-    thead { background: var(--accent); }
-    thead th {
-      padding: .85rem 1rem;
-      text-align: left;
-      font-weight: 600;
-      color: var(--white);
-      text-transform: uppercase;
-      letter-spacing: .06em;
-      font-size: .72rem;
-    }
-    tbody tr { border-bottom: 1px solid var(--divider); }
-    tbody tr:hover { background: rgba(74,144,217,.06); }
-    tbody td { padding: .8rem 1rem; color: var(--text-main); vertical-align: top; }
-    tbody td:first-child { font-weight: 600; color: var(--white); }
-
-    .exp-timeline { position: relative; padding-left: 2rem; }
-    .exp-timeline::before {
-      content: '';
-      position: absolute;
-      left: 0; top: 0; bottom: 0;
-      width: 2px;
-      background: var(--divider);
-    }
-    .exp-item { position: relative; margin-bottom: 2.5rem; }
-    .exp-item::before {
-      content: '';
-      position: absolute;
-      left: -2rem; top: .45rem;
-      width: 10px; height: 10px;
-      background: var(--accent);
-      border-radius: 50%;
-      border: 2px solid var(--navy);
-    }
-    .exp-item h3 { font-size: 1.05rem; font-weight: 600; color: var(--white); margin-bottom: .3rem; }
-    .exp-item .exp-role { font-size: .82rem; color: var(--accent); text-transform: uppercase; letter-spacing: .04em; margin-bottom: .5rem; }
-    .exp-item p { font-size: .9rem; color: var(--text-muted); }
-
-    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
-    .contact-info-item { display: flex; gap: .75rem; align-items: flex-start; margin-bottom: 1.4rem; }
-    .contact-info-item .ci-icon { color: var(--accent); font-size: 1rem; margin-top: .2rem; flex-shrink: 0; }
-    .contact-info-item .ci-label { font-size: .72rem; text-transform: uppercase; letter-spacing: .08em; color: var(--text-muted); margin-bottom: .15rem; }
-    .contact-info-item .ci-value { font-size: .95rem; color: var(--white); }
-
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-      padding: .75rem 1rem;
-      margin-bottom: 1rem;
-      background: var(--navy);
-      border: 1px solid var(--divider);
-      border-radius: 4px;
-      color: var(--text-main);
-      font-size: .9rem;
-    }
-    .contact-form input:focus,
-    .contact-form textarea:focus { outline: none; border-color: var(--accent); }
-    .contact-form textarea { min-height: 120px; resize: vertical; }
-    .contact-form .btn { width: 100%; }
-
-    @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; } }
-
-    footer {
-      background: var(--navy);
-      border-top: 1px solid var(--divider);
-      padding: 2.5rem 0;
-      text-align: center;
-    }
-    footer p { font-size: .78rem; color: var(--text-muted); }
-    footer .footer-links { margin-top: .5rem; }
-    footer .footer-links a { font-size: .75rem; color: var(--steel); margin: 0 .5rem; }
-    footer .footer-links a:hover { color: var(--accent); }
-  </style>
+footer {
+  border-top:1px solid var(--divider);
+  padding:2.5rem 0; text-align:center;
+  font-size:.78rem; color:var(--text-muted);
+}
+</style>
 </head>
 
 <body>
-  <!-- NAVIGATION (Updated - only one link to rural site) -->
-  <nav aria-label="Main navigation">
-    <div class="container nav-container">
-      
-      <a href="#home" class="brand">
-        <img src="/Flag_of_the_United_States.svg.webp" alt="American flag" width="42" height="28"
-             style="vertical-align: middle; margin-right: 10px; border-radius: 3px; box-shadow: 0 1px 3px rgba(0,0,0,0.3);">
-        JYA<span>.</span>
-      </a>
 
-      <button class="nav-toggle" aria-label="Toggle navigation"
-        onclick="document.querySelector('.nav-menu').classList.toggle('open')">
-        <span></span><span></span><span></span>
-      </button>
+<!-- NAVIGATION -->
+<nav>
+  <div class="container">
+    <a class="brand" href="#home">JYA<span>.</span></a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <!-- Clean single link to main site -->
+      <li><a href="https://jyainc.com">JYA Inc. (Mission-Critical)</a></li>
+    </ul>
+  </div>
+</nav>
 
-      <ul class="nav-menu">
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#capabilities">Capabilities</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="container">
+    <p class="credentials">RURAL · INFRASTRUCTURE · AGRICULTURE · ENERGY</p>
+    <h1>Engineering Support for Rural<br><span>Communities & Infrastructure</span></h1>
+    <p class="subtitle">
+      Federal-grade engineering discipline applied to aging infrastructure, 
+      agricultural facilities, tight budgets, and rural operations that must 
+      stay online during upgrades.
+    </p>
+    <div class="cta-row">
+      <a href="#services" class="btn btn-primary">Explore Services</a>
+      <a href="#contact" class="btn btn-outline">Get in Touch</a>
     </div>
-  </nav>
+  </div>
+</section>
 
-  <!-- HERO -->
-  <section class="hero" id="home">
-    <div class="container">
-      <p class="credentials">PE · TS/SCI · PMP · LEED AP BD+C</p>
-      <h1>Mission-Critical<br><span>Project Controls</span></h1>
-      <p class="subtitle">
-        Structured oversight, disciplined reporting, and executive-level clarity for programs
-        operating in high-assurance environments—where accuracy, reliability, and
-        accountability are non-negotiable.
-      </p>
-      <div class="cta-row">
-        <a href="#services" class="btn btn-primary">Explore Services</a>
-        <a href="#contact" class="btn btn-outline">Get in Touch</a>
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <p class="section-label">About</p>
+    <h2 class="section-title">Rural Engineering Without Urban Complexity</h2>
+    <div class="divider"></div>
+
+    <div class="about-grid">
+      <div class="about-text">
+        <p>
+          JYA Inc. provides practical engineering support for rural counties, 
+          municipalities, farms, co-ops, and private rural building owners.
+        </p>
+        <p>
+          We bring disciplined technical guidance to public works, agricultural 
+          facilities, and rural infrastructure — without large-firm overhead.
+        </p>
+        <p>
+          We also support <strong>HOMES and HEAR</strong> energy rebate programs, 
+          helping rural homeowners, contractors, and property owners access 
+          federal incentives for energy-efficient upgrades.
+        </p>
+      </div>
+
+      <div class="about-highlights">
+        <div class="highlight-card"><div class="number">Rural</div><div class="label">Focused Practice</div></div>
+        <div class="highlight-card"><div class="number">Federal</div><div class="label">Discipline Applied</div></div>
+        <div class="highlight-card"><div class="number">Ag & Infra</div><div class="label">Core Experience</div></div>
+        <div class="highlight-card"><div class="number">Energy</div><div class="label">HOMES / HEAR Support</div></div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="container">
-      <p class="section-label">About</p>
-      <h2 class="section-title">Who We Are</h2>
-      <div class="divider"></div>
-      <div class="about-grid">
-        <div class="about-text">
-          <p><strong>JYA Inc.</strong> is a Plattsmouth, Nebraska–based consulting firm led by John Yonemori-Antal, PE, PMP. We deliver mission-critical project controls, cost engineering, and BIM/VDC strategy for federal agencies, defense programs, and general contractors operating in high-assurance environments.</p>
-          <p>With a global footprint spanning CONUS and OCONUS operations, JYA Inc. brings disciplined program oversight to Tier IV data centers, secure underground facilities, detention infrastructure, aviation programs, and renewable energy initiatives—consistently supporting programs valued from $50M to over $2B.</p>
-          <p>We are registered in SAM.gov and positioned as a small disadvantaged business in a rural, underserved census tract—eligible for SBA mentor-protégé and federal set-aside programs.</p>
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <p class="section-label">Services</p>
+    <h2 class="section-title">Rural Engineering Services</h2>
+    <div class="divider"></div>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>3D Scanning & As-Builts</h3>
+        <p>LiDAR scanning, point clouds, and accurate existing-conditions documentation.</p>
+      </div>
+      <div class="service-card">
+        <h3>Infrastructure & Facilities</h3>
+        <p>Condition assessments, MEP modernization, and compliance planning for rural buildings.</p>
+      </div>
+      <div class="service-card">
+        <h3>Agricultural Facilities</h3>
+        <p>Barns, grain systems, shops, ventilation, and utility upgrades.</p>
+      </div>
+      <div class="service-card">
+        <h3>HOMES / HEAR Energy Modeling</h3>
+        <p>Energy rebate modeling, submission packet preparation, and documentation aligned with federal HOMES and HEAR program requirements.</p>
+      </div>
+      <div class="service-card">
+        <h3>Energy & Cost Reduction</h3>
+        <p>Heat pump feasibility, solar assessment, utility coordination, and incentive navigation.</p>
+      </div>
+      <div class="service-card">
+        <h3>Resilience & Planning</h3>
+        <p>Flood recovery, hazard mitigation, and system redundancy for rural operations.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="container">
+    <p class="section-label">Experience</p>
+    <h2 class="section-title">Rural-Relevant Experience</h2>
+    <div class="divider"></div>
+    <p class="section-intro">
+      Selected experience supporting rural infrastructure, agricultural facilities, 
+      energy programs, and resilience projects across the Midwest and Great Plains.
+    </p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <p class="section-label">Contact</p>
+    <h2 class="section-title">Start a Conversation</h2>
+    <div class="divider"></div>
+
+    <div class="contact-grid">
+      <div>
+        <p class="section-intro">
+          Supporting rural counties, agencies, farms, and building owners 
+          across the Midwest and Great Plains.
+        </p>
+
+        <div class="contact-info-item">
+          <div><strong>Email</strong></div>
+          <div><a href="mailto:john@jyainc.com">john@jyainc.com</a></div>
         </div>
-        <div class="about-highlights">
-          <div class="highlight-card"><div class="number">6</div><div class="label">Federal Agencies Served</div></div>
-          <div class="highlight-card"><div class="number">$2B+</div><div class="label">Largest Program Supported</div></div>
-          <div class="highlight-card"><div class="number">CONUS / OCONUS</div><div class="label">Global Footprint</div></div>
-          <div class="highlight-card"><div class="number">TS/SCI</div><div class="label">Clearance Level</div></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section id="services">
-    <div class="container">
-      <p class="section-label">Services</p>
-      <h2 class="section-title">What We Deliver</h2>
-      <div class="divider"></div>
-      <p class="section-intro">Five core service lines—each built for environments where failure has national-level consequences.</p>
-      <div class="services-grid">
-        <div class="service-card"><div class="service-icon">◆</div><h3>Mission-Critical Project Controls</h3><p>Structured oversight, disciplined reporting, and executive-level clarity where accountability is essential.</p></div>
-        <div class="service-card"><div class="service-icon">◆</div><h3>Federal / General Contractor Integration</h3><p>Bridging federal requirements with contractor execution to ensure alignment, compliance, and coordinated delivery.</p></div>
-        <div class="service-card"><div class="service-icon">◆</div><h3>BIM / VDC Strategy & Oversight</h3><p>Modeling standards, coordination workflows, and digital execution strategy supporting complex programs.</p></div>
-        <div class="service-card"><div class="service-icon">◆</div><h3>Cost Engineering & Program Assurance</h3><p>Independent cost analysis, risk evaluation, and structured assurance frameworks for informed decisions.</p></div>
-        <div class="service-card"><div class="service-icon">◆</div><h3>Compliance-Aligned Documentation</h3><p>TS/SCI-aware documentation support aligned with federal standards, reporting expectations, and review processes.</p></div>
-        <div class="service-card"><div class="service-icon">◆</div><h3>HOMES / HEAR Energy Modeling</h3><p>Energy rebate modeling, submission packet preparation, and documentation aligned with HOMES/HEAR requirements.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CAPABILITIES -->
-  <section id="capabilities">
-    <div class="container">
-      <p class="section-label">Capabilities</p>
-      <h2 class="section-title">Credentials & Qualifications</h2>
-      <div class="divider"></div>
-      <p class="section-intro">Professional licensure, federal clearance, and industry certifications supporting execution across demanding environments.</p>
-      <div class="cap-grid">
-        <div class="cap-item"><span class="cap-icon">✓</span><span>Professional Engineer (Mechanical & Electrical)</span></div>
-        <div class="cap-item"><span class="cap-icon">✓</span><span>TS/SCI Security Clearance</span></div>
-        <div class="cap-item"><span class="cap-icon">✓</span><span>Project Management Professional (PMP)</span></div>
-        <div class="cap-item"><span class="cap-icon">✓</span><span>LEED AP BD+C</span></div>
-        <div class="cap-item"><span class="cap-icon">✓</span><span>Autodesk Revit Certified Trainer</span></div>
-        <div class="cap-item"><span class="cap-icon">✓</span><span>AGC BIM Certificate</span></div>
-        <div class="cap-item"><span class="cap-icon">✓</span><span>SAM.gov Registered Entity</span></div>
-        <div class="cap-item"><span class="cap-icon">✓</span><span>Nebraska Licensed Contractor (#24979-26)</span></div>
-        <div class="cap-item"><span class="cap-icon">✓</span><span>Small Disadvantaged Business (Rural)</span></div>
-        <div class="cap-item"><span class="cap-icon">✓</span><span>SBA Mentor-Protégé Eligible</span></div>
-        <div class="cap-item"><span class="cap-icon">✓</span><span>CONUS & OCONUS Operations</span></div>
-        <div class="cap-item"><span class="cap-icon">✓</span><span>DD-1391 & Federal Cost Estimating</span></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- AGENCY TABLE -->
-  <section id="agency-summary">
-    <div class="container">
-      <p class="section-label">Agency Summary</p>
-      <h2 class="section-title">Experience by Agency</h2>
-      <div class="divider"></div>
-      <p class="section-intro">Federal-brief format overview of representative agency experience, roles, and program scope.</p>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>Agency / Client</th>
-              <th>Key Projects</th>
-              <th>Role(s)</th>
-              <th>Scope / Impact</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td>DHS — U.S. Customs & Border Protection</td><td>Nationwide detention facilities</td><td>Owner's Representative</td><td>Emergency-funded task orders</td></tr>
-            <tr><td>DoD — U.S. Air Force</td><td>NKO & STRATCOM Tier IV Data Centers</td><td>Project Manager</td><td>$500M+ mission-critical programs</td></tr>
-            <tr><td>DoD — U.S. Army / USACE</td><td>Secure underground infrastructure</td><td>Estimator / PE</td><td>Tier IV data centers & tunnels</td></tr>
-            <tr><td>DoD — U.S. Navy / NAVFAC</td><td>China Lake NAWS & solar programs</td><td>Senior Estimator</td><td>Large-scale aviation & energy</td></tr>
-            <tr><td>DOJ — FBI</td><td>Redstone Arsenal Tier IV Data Center</td><td>Owner's Representative</td><td>Mission-critical delivery</td></tr>
-            <tr><td>Intelligence Community</td><td>NSA Fort Meade & STRATCOM</td><td>BIM/VDC Lead</td><td>TS/SCI SCIF-grade facilities</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
-  <!-- EXPERIENCE -->
-  <section id="experience">
-    <div class="container">
-      <p class="section-label">Experience</p>
-      <h2 class="section-title">Representative Experience</h2>
-      <div class="divider"></div>
-      <p class="section-intro">High-level summaries of mission-critical program experience.</p>
-      <div class="exp-timeline">
-        <div class="exp-item"><h3>Tier IV Data Center Programs</h3><div class="exp-role">Multiple Agencies</div><p>End-to-end project controls for Tier IV programs across CONUS and OCONUS.</p></div>
-        <div class="exp-item"><h3>Secure Underground & Continuity Infrastructure</h3><div class="exp-role">Army, NSA, USSTRATCOM</div><p>Engineering and estimating for classified underground facilities.</p></div>
-        <div class="exp-item"><h3>Detention & Border Security Infrastructure</h3><div class="exp-role">DHS</div><p>Owner's Representative support for detention facilities.</p></div>
-        <div class="exp-item"><h3>Aviation & Renewable Energy Programs</h3><div class="exp-role">U.S. Navy / NAVFAC</div><p>Senior estimating and concept design for aviation and energy programs.</p></div>
-        <div class="exp-item"><h3>HOMES / HEAR Energy Modeling</h3><div class="exp-role">Nebraska & Iowa</div><p>Energy rebate modeling and submission packet preparation.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT (Original full version restored) -->
-  <section id="contact">
-    <div class="container">
-      <p class="section-label">Contact</p>
-      <h2 class="section-title">Start a Conversation</h2>
-      <div class="divider"></div>
-      <div class="contact-grid">
-        <div class="contact-details">
-          <p class="section-intro" style="margin-bottom:2rem;">Ready to discuss a program, partnership, or teaming opportunity? Reach out directly—we respond within one business day.</p>
-          <div class="contact-info-item"><span class="ci-icon">✉</span><div><div class="ci-label">Email</div><div class="ci-value"><a href="mailto:john@jyainc.com">john@jyainc.com</a></div></div></div>
-          <div class="contact-info-item"><span class="ci-icon">☎</span><div><div class="ci-label">Phone</div><div class="ci-value"><a href="tel:+14024305418">(402) 430-5418</a></div></div></div>
-          <div class="contact-info-item"><span class="ci-icon">⚑</span><div><div class="ci-label">Office</div><div class="ci-value">302 Prairie Road, Plattsmouth, NE 68048</div></div></div>
-          <div class="contact-info-item"><span class="ci-icon">◆</span><div><div class="ci-label">Registrations</div><div class="ci-value">SAM.gov · DSBS · NE License #24979-26</div></div></div>
-        </div>
-        <div class="contact-form">
-          <form action="#" method="post" onsubmit="return false;">
-            <input type="text" name="name" placeholder="Your Name" required />
-            <input type="email" name="email" placeholder="Your Email" required />
-            <input type="text" name="subject" placeholder="Subject" />
-            <textarea name="message" placeholder="How can we help?" required></textarea>
-            <button type="submit" class="btn btn-primary">Send Message</button>
-            <p style="margin-top:.75rem; font-size:.8rem; color:var(--text-muted);">Note: This form is a static placeholder. Use email for now.</p>
-          </form>
+        <div class="contact-info-item">
+          <div><strong>Phone</strong></div>
+          <div><a href="tel:+14024305418">(402) 430-5418</a></div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="container">
-      <p>© 2026 JYA Inc. All rights reserved.</p>
-      
-      <!-- Single clean link to rural site -->
-      <p style="margin-top: 1rem; font-size: 0.9rem;">
-        <a href="https://jya-rural-engineering.com">Rural Infrastructure &amp; Energy Services →</a>
-      </p>
-
-      <div class="footer-links" style="margin-top: 1rem;">
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
+      <div class="contact-form">
+        <input type="text" placeholder="Your Name" />
+        <input type="email" placeholder="Your Email" />
+        <textarea placeholder="How can we help?"></textarea>
+        <button class="btn btn-primary">Send Message</button>
       </div>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <script>
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener('click', e => {
-        const target = document.querySelector(a.getAttribute('href'));
-        if (target) {
-          e.preventDefault();
-          target.scrollIntoView({ behavior: 'smooth' });
-          const menu = document.querySelector('.nav-menu');
-          if (menu) menu.classList.remove('open');
-        }
-      });
-    });
+<footer>
+  © 2026 JYA Inc. — Rural Engineering & Energy Support<br>
+  <a href="https://jyainc.com" style="margin-top: 0.75rem; display: inline-block;">
+    JYA Inc. — Mission-Critical Project Controls →
+  </a>
+</footer>
 
-    const navEl = document.querySelector('nav');
-    window.addEventListener('scroll', () => {
-      navEl.style.background = window.scrollY > 60
-        ? 'rgba(11, 26, 46, .97)'
-        : 'rgba(11, 26, 46, .92)';
-    });
-  </script>
 </body>
 </html>
